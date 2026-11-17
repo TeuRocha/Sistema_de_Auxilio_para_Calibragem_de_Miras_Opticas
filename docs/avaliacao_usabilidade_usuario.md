@@ -49,7 +49,7 @@
 ┌──────────────────────────────────────────────────────────────┐
 │  ANÁLISE E CONSOLIDAÇÃO                                      │
 │  • Transcrever anotações da tabela de observação             │
-│  • Consolidar resultados dos dois participantes              │
+│  • Consolidar resultados do participante                     │
 │  • Identificar padrões e tendências comuns                   │
 │  • Produzir relatório com conclusões e melhorias             │
 └──────────────────────────────────────────────────────────────┘
@@ -63,13 +63,12 @@
 Foi entregue a cada participante o seguinte roteiro com as tarefas a serem cumpridas, sem interferência ou instrução de uso do sistema:
 
 - Tarefa 1: Crie uma conta e realize o login no sistema.
-- Tarefa 2: Iniciar uma nova sessão de calibração.
-- Tarefa 3: Configurar setup de calibração.
-- Tarefa 4: Defina o Ponto de Mira (POA) na tela.
-- Tarefa 5: Salve a imagem do alvo limpo (Referência).
-- Tarefa 6: Verifique se o sistema detectou corretamente o seu Ponto de Impacto (POI).
-- Tarefa 7: Consulte o feedback gerado e confirme se entendeu como ajustar sua mira óptica.
-- Tarefa 8: Encerre a sessão e volte ao menu.
+- Tarefa 2: Configurar setup de calibração.
+- Tarefa 3: Defina o Ponto de Mira (POA) na tela.
+- Tarefa 4: Salve a imagem do alvo limpo (Referência).
+- Tarefa 5: Verifique se o sistema detectou corretamente o seu Ponto de Impacto (POI).
+- Tarefa 6: Consulte o feedback gerado e confirme se entendeu como ajustar sua mira óptica.
+- Tarefa 7: Encerre a sessão e volte ao menu.
 
 **Passo 2 — Perfil do participante recrutado**
 
@@ -92,7 +91,7 @@ Foi entregue a cada participante o seguinte roteiro com as tarefas a serem cumpr
 ---
 
 ## 3. Dados Brutos e Registros em Vídeo
-Para garantir a transparência e a validade metodológica da avaliação (como estabelecido no método DECIDE), as sessões foram gravadas mediante consentimento.
+Para garantir a transparência e a validade metodológica da avaliação (como estabelecido no método DECIDE), a sessão foi gravada mediante consentimento.
 
 - Link da gravação: Participante 1 (Experiente): https://drive.google.com/file/d/1Dcavxn_2snScet9Kua0SQtitpxr8-kwd/view?usp=sharing
 
@@ -106,7 +105,7 @@ Para garantir a transparência e a validade metodológica da avaliação (como e
 | :--: | :--- | :--: | :--- | :--- | :--- |
 | 1 — Login/Cadastro | Sucesso Total | 0 | — | ~00:40 seg. | Satisfeito |
 | 2 — Setup de Calibração | Sucesso Total | 0 | — | ~00:15 seg. | Muito Satisfeito |
-| 3 — Definir POA | Sucesso Total | 1 | - | ~00:15 seg. | Muito Satisfeito |
+| 3 — Definir POA | Sucesso Total | 0 | - | ~00:15 seg. | Muito Satisfeito |
 | 4 — Salvar Referência | Sucesso Total | 0 | — | ~00:05 s | Satisfeito |
 | 5 — Verificar POI | Sucesso Parcial | 2 | Saiu da tela de verificação antes do esperado; Hesitação sobre como continuar | ~02:10 min (inclui disparo) | Confusão Moderada |
 | 6 — Consultar Feedback | Sucesso Total | 0 | — | ~35 s (inclui calibrar) | Muito Satisfeito |
@@ -116,7 +115,7 @@ Para garantir a transparência e a validade metodológica da avaliação (como e
 ### Respostas Relacionadas a Calibração do Formulário de Perfil dos Usuários
 
 **Participante:** Adriano Antonio de Novaes
-**Data:** 16/05/2026<br>
+**Data:** 10/11/2026<br>
 
 ---
 
@@ -219,6 +218,6 @@ Pesquisador Responsável: Mateus Rocha
 
 Você está sendo convidado(a) a participar de uma avaliação de usabilidade de um sistema focado em tiro esportivo. O objetivo deste teste não é avaliar suas habilidades como atirador ou seu conhecimento de informática, mas sim avaliar se o sistema foi construído de forma fácil e intuitiva.
 
-Procedimentos: Você utilizará um protótipo do sistema para realizar tarefas pré-definidas em um ambiente controlado. Durante a sessão, o pesquisador observará suas interações. Riscos e Benefícios: Não há riscos físicos envolvidos no uso do software. O teste em estande segue as normas vigentes. O benefício é contribuir para a criação de uma tecnologia acessível. Privacidade e Gravação: Autorizo que minha tela, imagem e voz sejam gravadas e que os dados de desempenho (tempo, cliques, falas) sejam usados de forma anônima para fins acadêmicos no relatório final do projeto. Autonomia: A participação é voluntária. Você pode desistir a qualquer momento, sem nenhuma penalidade.
+Procedimentos: Você utilizará um protótipo do sistema para realizar tarefas pré-definidas em um ambiente controlado. Durante a sessão, o pesquisador observará suas interações. Riscos e Benefícios: Não há riscos físicos envolvidos no uso do software. O teste em estande segue as normas vigentes. O benefício é contribuir para a criação de uma tecnologia acessível. Privacidade, Gravação e Uso dos Dados: Autorizo que minha tela, imagem e voz sejam gravadas durante a sessão e que os dados coletados (desempenho, tempo, erros, falas e respostas do questionário) sejam analisados e utilizados de forma estritamente anônima para fins acadêmicos, incluindo a avaliação de usabilidade, o diagnóstico de problemas de interface, o reprojeto e o aprimoramento contínuo do sistema, bem como a publicação no relatório final e eventuais produções científicas derivadas deste projeto. Autonomia: A participação é voluntária. Você pode desistir a qualquer momento, sem nenhuma penalidade.
 
-Eu, Adriano Antonio de Novaes, concordo em participar da pesquisa no dia 10/11/2026.
+Eu, Participante, concordo em participar da pesquisa no dia DD/MM/YYYY.
