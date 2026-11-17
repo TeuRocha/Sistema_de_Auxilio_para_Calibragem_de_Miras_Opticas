@@ -1,4 +1,4 @@
-# 🎯 Calibration Tool — Auxílio de Calibragem de Mira Inteligente para Fins Esportivos
+# 🎯 Calibration Tool — Sistema de Auxílio para Calibragem de Miras Ópticas
 
 > 🏆 **Projeto Premiado:** 1º Lugar na categoria Ciência da Computação no **INOVAFEI** (Centro Universitário FEI).
 
