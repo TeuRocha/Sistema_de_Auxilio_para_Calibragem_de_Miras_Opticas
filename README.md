@@ -21,7 +21,7 @@ O **Calibration Tool** resolve esse problema por meio de um fluxo assistido em t
 
 | Diretório | Conteúdo |
 | :--- | :--- |
-| **[`/src`](./src)** | Código-fonte principal da aplicação em Python (OpenCV, NumPy), interface gráfica e requisitos de execução. |
+| **[`/src`](./src/sistema_calibracao)** | Código-fonte principal da aplicação em Python (OpenCV, NumPy), interface gráfica e requisitos de execução. |
 | **[`/documentacao_ihc`](./documentacao_ihc)** | Documentação completa de Engenharia de Usabilidade: Personas, Análise de Tarefas (HTA, GOMS, CTT), MoLIC, Planejamento DECIDE, Inspeção Heurística e Avaliação Empírica. |
 | **[`/documentos_tcc`](./documentos_tcc)** | Monografia final, apresentações de banca, referências bibliográficas e arquivos dos marcadores ArUco para impressão. |
 | **[`/scripts_auxiliares`](./scripts_auxiliares)** | Scripts utilitários para teste isolado de conexão de câmera IP, validação de homografia e calibração intrínseca. |
