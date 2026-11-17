@@ -1,5 +1,8 @@
-- **calibracao_camera.py:** Script auxiliar para cálculo de parâmetros intrínsecos da lente (caso necessário em testes futuros sem correção planar).
+# Informações Auxiliares ao Sistema de Calibração
+> Nota: Não é obrigatório a execução destes códigos atualmente. Servem como auxilio em casos estritamente necessários, e para histórico de documentação.
 
-- **mapeamento_homografia.py:** Protótipo inicial de validação da transformação homográfica via ArUco antes da integração com a interface gráfica.
+**calibracao_camera.py:** Script auxiliar para cálculo de parâmetros intrínsecos da lente (caso necessário em testes futuros sem correção planar).
 
-- **conexao.py:** Script utilitário de diagnóstico rápido para testar o stream de vídeo da câmera IP (ex.: app IP Webcam no smartphone) antes de iniciar o sistema principal.
+**mapeamento_homografia.py:** Protótipo inicial de validação da transformação homográfica via ArUco antes da integração com a interface gráfica.
+
+**conexao.py:** Script utilitário de diagnóstico rápido para testar o stream de vídeo da câmera IP (ex.: app IP Webcam no smartphone) antes de iniciar o sistema principal.
