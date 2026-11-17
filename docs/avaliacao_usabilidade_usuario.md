@@ -114,7 +114,7 @@ Para garantir a transparência e a validade metodológica da avaliação (como e
 ---
 ### Respostas Relacionadas a Calibração do Formulário de Perfil dos Usuários
 
-**Participante:** Adriano Antonio de Novaes
+**Participante 1 (Atirador Experiente)**<br>
 **Data:** 10/11/2026<br>
 
 ---
