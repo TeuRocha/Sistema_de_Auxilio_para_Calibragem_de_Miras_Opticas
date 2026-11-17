@@ -73,7 +73,7 @@ Foi entregue a cada participante o seguinte roteiro com as tarefas a serem cumpr
 **Passo 2 — Perfil do participante recrutado**
 
 | Critério | Participante 1 |
-| :--- | :--- | :--- |
+| :--- | :--- |
 | Perfil | Atirador experiente |
 | Referência no projeto | Amália Silva |
 | Familiaridade com lunetas | Alta |
