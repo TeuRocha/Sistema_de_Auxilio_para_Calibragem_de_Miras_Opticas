@@ -28,7 +28,7 @@ Lucas Mendes, preocupado com o custo das munições gastas, utiliza a Visão Top
 
 ## Mapa de Objetivos do Usuário
 
-<img width="711" height="930" alt="mapacore" src="https://github.com/user-attachments/assets/5a786ed1-bfa3-4da1-a0f8-5c59789d9c55" />
+<img width="703" height="961" alt="mapaobjetivo drawio" src="https://github.com/user-attachments/assets/cdcc4e14-aa1c-4afa-8de1-1a7c083f56c9" />
 
 ## Tabela de Acesso
 | Acesso (A) \- dados para acessar o sistema |  |  |  |  |  |  |  |  |
