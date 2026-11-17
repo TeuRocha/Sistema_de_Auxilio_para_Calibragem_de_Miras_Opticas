@@ -62,4 +62,6 @@ python app.py
 
 - Erro ao conectar na câmera: Verifique se o computador e o smartphone estão na mesma rede Wi-Fi e se o endereço termina com /video. Você pode testar a conexão isoladamente usando o script conexao.py na pasta [scripts_auxiliares](/scripts_auxiliares).
 
-- Marcadores ArUco não detectados: Certifique-se de que os 4 cantos do alvo estão totalmente visíveis no enquadramento da câmera e sem sombras fortes ou reflexos diretos sobre os marcadores. Seguindo a ordem e posicionamento padrão, que pode ser visualizado na imagem [formato_padrao_marcadores](documentos_tcc/marcadores_aruco/formato_padrao_marcadores.png)
+- Marcadores ArUco não detectados: Certifique-se de que os 4 cantos do alvo estão totalmente visíveis no enquadramento da câmera e sem sombras fortes ou reflexos diretos sobre os marcadores. Seguindo a ordem e posicionamento padrão, que pode ser visualizado na imagem a seguir:
+
+<img width="362" height="491" alt="formato_padrao_marcadores" src="https://github.com/user-attachments/assets/4a67833b-d592-47b0-b355-a4b8ca7f56c0" />
