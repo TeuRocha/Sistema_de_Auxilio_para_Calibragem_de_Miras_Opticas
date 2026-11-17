@@ -65,14 +65,16 @@ Avaliação heurística, definida por Nielsen e Molich (1994), é um método de 
 #### H3 - Controle e Liberdade do Usuário
 > Nota: Ausência do botão voltar em diversas telas.
 > As telas seguem respectivamente: Definir POA, Salvar Referência, Confirmar POI, Consultar Feedback.
-<img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/83fe4c75-3ac8-413a-8a98-acab7d7444f3" />
-falta
+<img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/25169788-5fd5-4805-9d9b-94015f2c4496" />
+<img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/6ac07d2d-6108-4074-af17-179f8ceb351f" />
+<img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/a5271b3e-161b-4501-a5d7-70aa8efa1003" />
+<img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/4063ebf1-850f-4d2c-a276-9fa104cb7fc4" />
 
 #### H4 - Consistência e Padronização
-> Nota: Ausência de padronização nos botões que avançam etapas do sistema nas telas Definir POA e Salvar referência.
+> Nota: Ausência de padronização nos botões que avançam etapas do sistema.
 > As telas seguem respectivamente: Definir POA, Salvar Referência.
-<img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/3348534f-e070-42ea-b115-4e426576ad7f" />
-falta
+<img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/aff0504d-6336-437d-9935-f449ceeae68a" />
+<img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/6ac07d2d-6108-4074-af17-179f8ceb351f" />
 
 #### H5 - Prevenção de Erros
 > Nota: Ausência de limite para definir distância, permitindo valores negativos na tela Setup de Calibração.
@@ -82,8 +84,10 @@ falta
 > Nota: Ausência de seção ajuda em todas as etapas de calibração do sistema.
 > As telas seguem respectivamente: Setup de Calibração, Definir POA, Salvar Referência, Confirmar POI, Consultar Feedback.
 <img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/32d32ac1-5da6-4586-a65a-1de05aac925b" />
-<img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/a0b28c84-e390-47df-9279-7fcaf2835a87" />
-falta
+<img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/aff0504d-6336-437d-9935-f449ceeae68a" />
+<img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/6ac07d2d-6108-4074-af17-179f8ceb351f" />
+<img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/a5271b3e-161b-4501-a5d7-70aa8efa1003" />
+<img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/4063ebf1-850f-4d2c-a276-9fa104cb7fc4" />
 
 ---
 
@@ -93,60 +97,81 @@ falta
 
 | # | Heurística | Exemplo de Aplicação no Sistema |
 | :--: | :--- | :--- |
-| H1 | **Visibilidade do Estado do Sistema** | Na tela "Confirmar POA", o sistema exibe em tempo real o status de detecção dos marcadores ArUco com badge colorido ("ArUcos detectados" em verde), mantendo o usuário constantemente informado sobre sua detecção. |
+| H1 | **Visibilidade do Estado do Sistema** | Na tela "Definir POA", "Salvar Referência" e "Confirmar POI", o sistema exibe em tempo real o status de detecção dos marcadores ArUco com badge colorido ("ArUcos detectados" em verde), mantendo o usuário constantemente informado sobre sua detecção. |
 | H2 | **Compatibilidade entre Sistema e Mundo Real** | O feedback de correção é apresentado em linguagem direta e familiar ao atirador: "4 cliques para Direita \| 7 cliques para Cima", em vez de valores técnicos em MOA ou MIL. Isso traduz o jargão balístico para instruções concretas de ajuste nas torres da luneta, linguagem já conhecida pelo público-alvo. |
-| H3 | **Controle e Liberdade do Usuário** | Na tela "Definir POA", o usuário pode redefinir o ponto de mira quantas vezes quiser antes de confirmar. O sistema não força um comprometimento prematuro com uma posição incorreta. |
+| H3 | **Controle e Liberdade do Usuário** | Na tela "Definir POA", o usuário pode redefinir o ponto de mira quantas vezes quiser antes de confirmar. Na tela "Confirmar POI", o usuário pode verificar quantas vezes for necessário. O sistema não força um comprometimento prematuro com uma definição incorreta. |
 | H4 | **Consistência e Padronização** | O sistema mantém identidade visual consistente em todas as telas: mesma paleta de cores, mesma tipografia, mesmo espaçamento e mesmo padrão de mensagens de erro com texto descritivo. |
 | H5 | **Prevenção de Erros** | Na tela "Definir POA", o botão "Confirmar POA" permanece desabilitado enquanto nenhum ponto de mira tiver sido definido, impedindo que o usuário avance para a próxima etapa sem ter completado a ação necessária. |
 | H6 | **Reconhecimento em Lugar de Lembrança** | Durante o fluxo de calibração, as configurações iniciais (como a distância definida na primeira etapa) são mantidas pelo sistema e aplicadas automaticamente no cálculo balístico final. Além disso, a marcação do Ponto de Mira (POA) permanece visível como referência durante a captura do Ponto de Impacto (POI), não obrigando memorização do usuário sobre suas ações anteriores. |
 | H7 | **Flexibilidade e Eficiência de Uso** | Na tela "Setup de Calibração", o sistema oferece tanto botões de setas para cima e para baixo, quanto campo de entrada manual para valores personalizados, permitindo o usuário escolher como definir distância. |
 | H8 | **Projeto Minimalista e Estético** | O design segue padrão dark mode com elementos técnicos e limpos, sem banners publicitários, animações desnecessárias ou informações irrelevantes. Cada elemento de interface presente na tela tem função direta na tarefa atual do usuário. |
-| H9 | **Auxiliar os Usuários a Reconhecer, Diagnosticar e Recuperar Erros** | Na tela "Confirmar POI", o sistema exibe mensagens de falha específicas e descritivas por tipo de problema: "Ruído de iluminação detectado. Tente estabilizar a luz.", "Detecção muito pequena. Verifique se o disparo acertou o alvo.", "Nenhum impacto detectado ou ruído excessivo. Verifique o alvo." — cada mensagem identifica o problema e orienta a ação de recuperação. |
+| H9 | **Auxiliar os Usuários a Reconhecer, Diagnosticar e Recuperar Erros** | Na tela "Definir POA", o sistema exibe mensagem de falha específica descritiva para o problema de clicar fora da área limite de detecção dos marcadores, e informa como corrigir o problema. |
 
 ### Imagens das Boas Práticas de Heurísticas
 
 #### H1 - Visibilidade do Estado do Sistema
-> Nota: O sistema mantém identidade visual em todas as telas com relação à mesma paleta de cores, tipografia, espaçamento e mensagens de erro.
-
+> Nota: O sistema exibe status de detecção em tempo real como feedback visual de seu funcionamento.
+> As telas seguem respectivamente: Definir POA, Salvar Referência, Confirmar POI.
+<img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/aff0504d-6336-437d-9935-f449ceeae68a" />
+<img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/6ac07d2d-6108-4074-af17-179f8ceb351f" />
+<img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/a5271b3e-161b-4501-a5d7-70aa8efa1003" />
 
 #### H2 - Compatibilidade entre Sistema e Mundo Real
-> Nota: O sistema mantém identidade visual em todas as telas com relação à mesma paleta de cores, tipografia, espaçamento e mensagens de erro.
-
+> Nota: O sistema retorna um feedback em linguagem direta e familiar ao atirador na tela Consultar Feedback.
+<img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/4063ebf1-850f-4d2c-a276-9fa104cb7fc4" />
 
 #### H3 - Controle e Liberdade do Usuário
-> Nota: O sistema mantém identidade visual em todas as telas com relação à mesma paleta de cores, tipografia, espaçamento e mensagens de erro.
-
+> Nota: O sistema permite liberdade para definir seu ponto de mira e verificar ponto de impacto quantas vezes quiser.
+> As telas seguem respectivamente: Definir POA, Confirmar POI.
+<img width="1256" height="784" alt="image" src="https://github.com/user-attachments/assets/25169788-5fd5-4805-9d9b-94015f2c4496" />
+<img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/a5271b3e-161b-4501-a5d7-70aa8efa1003" />
 
 #### H4 - Consistência e Padronização
 > Nota: O sistema mantém identidade visual em todas as telas com relação à mesma paleta de cores, tipografia, espaçamento e mensagens de erro.
-> As telas seguem respectivamente: Efetuar Login, Menu Principal, Setup de Calibração, Definir POA, Salvar Referência.
+> As telas seguem respectivamente: Cadastrar Usuário, Efetuar Login, Menu Principal, Histórico de Calibração, Setup de Calibração, Definir POA, Salvar Referência, Confirmar POI, Consultar Feedback.
+<img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/738436d5-11e8-4607-996d-244394859ff2" />
 <img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/e70975e0-df90-4f19-b827-1cdfa72d73ff" />
 <img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/05408000-d84e-4a27-87b1-46ffb15d65a4" />
+<img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/e422eab6-d8b4-4c9c-b35a-9fbdbafb16d0" />
 <img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/0845cc82-571b-40b3-8ed8-fd9b468aca11" />
-<img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/3348534f-e070-42ea-b115-4e426576ad7f" />
-falta
+<img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/aff0504d-6336-437d-9935-f449ceeae68a" />
+<img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/6ac07d2d-6108-4074-af17-179f8ceb351f" />
+<img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/a5271b3e-161b-4501-a5d7-70aa8efa1003" />
+<img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/4063ebf1-850f-4d2c-a276-9fa104cb7fc4" />
 
 #### H5 - Prevenção de Erros
-> Nota: O sistema mantém identidade visual em todas as telas com relação à mesma paleta de cores, tipografia, espaçamento e mensagens de erro.
-
+> Nota: O sistema mantém desabilitado o botão que avança no sistema quando o usuário há de realizar uma ação, ou na falta de detecção do alvo.
+> As telas seguem respectivamente: Definir POA, Confirmar POI.
+<img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/aff0504d-6336-437d-9935-f449ceeae68a" />
+<img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/3f58a503-d7de-45f8-9130-8982105cb086" />
 
 #### H6 - Reconhecimento em Lugar de Lembrança
-> Nota: O sistema mantém identidade visual em todas as telas com relação à mesma paleta de cores, tipografia, espaçamento e mensagens de erro.
-
+> Nota: O sistema não exige do atirador memorização sobre suas ações anteriores.
+> As telas seguem respectivamente: Setup de Calibração, Confirmar POI
+<img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/0845cc82-571b-40b3-8ed8-fd9b468aca11" />
+<img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/a5271b3e-161b-4501-a5d7-70aa8efa1003" />
 
 ####  H7 - Flexibilidade e Eficiência de Uso
 > Nota: O sistema oferece diversas maneiras para o usuário escolher como definir distância na tela Setup de Calibração.
 <img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/5638c7a5-d81b-4d73-8540-d945c44b8917" />
 
 #### H8 - Projeto Minimalista e Estético
-> Nota: O sistema segue padrão de design dark mode com visual técnico e limpo, sem informações desnecessária em todas as telas.
-> As telas seguem respectivamente: Efetuar Login, Menu Principal, Histórico de Disparos, Setup de Calibração, Definir POA, Salvar Referência, Confirmar POI, Consultar Feedback.
+> Nota: O sistema segue padrão de design dark mode com visual técnico e limpo, sem informações desnecessárias em todas as telas.
+> As telas seguem respectivamente: Cadastrar Usuário, Efetuar Login, Menu Principal, Histórico de Calibração, Setup de Calibração, Definir POA, Salvar Referência, Confirmar POI, Consultar Feedback.
+<img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/738436d5-11e8-4607-996d-244394859ff2" />
 <img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/e70975e0-df90-4f19-b827-1cdfa72d73ff" />
 <img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/05408000-d84e-4a27-87b1-46ffb15d65a4" />
 <img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/e422eab6-d8b4-4c9c-b35a-9fbdbafb16d0" />
 <img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/0845cc82-571b-40b3-8ed8-fd9b468aca11" />
-<img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/3348534f-e070-42ea-b115-4e426576ad7f" />
-falta
+<img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/aff0504d-6336-437d-9935-f449ceeae68a" />
+<img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/6ac07d2d-6108-4074-af17-179f8ceb351f" />
+<img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/a5271b3e-161b-4501-a5d7-70aa8efa1003" />
+<img width="1255" height="782" alt="image" src="https://github.com/user-attachments/assets/4063ebf1-850f-4d2c-a276-9fa104cb7fc4" />
+
+####  H9 - Auxiliar os Usuários a Reconhecer, Diagnosticar e Recuperar Erros
+> Nota: O sistema exibe mensagem de erro ao tentar marcar o POA onde não é possível, informando como corrigir o problema na tela Definir POA.
+<img width="1262" height="790" alt="image" src="https://github.com/user-attachments/assets/fde5927a-38f3-40d8-b7a9-b46e77a35c12" />
+
 
 ---
 
