@@ -1,0 +1,450 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{jornalUSP}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=090bfc0f33b94cfa3c3f97e2ebfbdafa}{%
+           family={Ozima},
+           familyi={O\bibinitperiod},
+           given={Leonardo},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Ribeirão Preto}%
+      }
+      \list{publisher}{1}{%
+        {Jornal da USP}%
+      }
+      \strng{namehash}{090bfc0f33b94cfa3c3f97e2ebfbdafa}
+      \strng{fullhash}{090bfc0f33b94cfa3c3f97e2ebfbdafa}
+      \strng{fullhashraw}{090bfc0f33b94cfa3c3f97e2ebfbdafa}
+      \strng{bibnamehash}{090bfc0f33b94cfa3c3f97e2ebfbdafa}
+      \strng{authorbibnamehash}{090bfc0f33b94cfa3c3f97e2ebfbdafa}
+      \strng{authornamehash}{090bfc0f33b94cfa3c3f97e2ebfbdafa}
+      \strng{authorfullhash}{090bfc0f33b94cfa3c3f97e2ebfbdafa}
+      \strng{authorfullhashraw}{090bfc0f33b94cfa3c3f97e2ebfbdafa}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em: [24 out. 2025]}
+      \field{title}{Cresce o mercado de armas no Brasil enquanto fiscalização enfrenta fragilidades}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://jornal.usp.br/campus-ribeirao-preto/cresce-o-mercado-de-armas-no-brasil-enquanto-fiscalizacao-enfrenta-fragilidades/
+      \endverb
+      \verb{url}
+      \verb https://jornal.usp.br/campus-ribeirao-preto/cresce-o-mercado-de-armas-no-brasil-enquanto-fiscalizacao-enfrenta-fragilidades/
+      \endverb
+    \endentry
+    \entry{anuario2025}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=57912cd34fcd2f2c7d14b1db4da70351}{%
+           family={{FÓRUM BRASILEIRO DE SEGURANÇA PÚBLICA}},
+           familyi={F\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {São Paulo}%
+      }
+      \list{publisher}{1}{%
+        {FÓRUM BRASILEIRO DE SEGURANÇA PÚBLICA}%
+      }
+      \strng{namehash}{57912cd34fcd2f2c7d14b1db4da70351}
+      \strng{fullhash}{57912cd34fcd2f2c7d14b1db4da70351}
+      \strng{fullhashraw}{57912cd34fcd2f2c7d14b1db4da70351}
+      \strng{bibnamehash}{57912cd34fcd2f2c7d14b1db4da70351}
+      \strng{authorbibnamehash}{57912cd34fcd2f2c7d14b1db4da70351}
+      \strng{authornamehash}{57912cd34fcd2f2c7d14b1db4da70351}
+      \strng{authorfullhash}{57912cd34fcd2f2c7d14b1db4da70351}
+      \strng{authorfullhashraw}{57912cd34fcd2f2c7d14b1db4da70351}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em: [24 out. 2025]}
+      \field{title}{19° Anuário Brasileiro de Segurança Pública}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://publicacoes.forumseguranca.org.br/handle/123456789/279
+      \endverb
+      \verb{url}
+      \verb https://publicacoes.forumseguranca.org.br/handle/123456789/279
+      \endverb
+    \endentry
+    \entry{gecex126}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=7e337d1bc0fcbda4cd240ea6348f4d5f}{%
+           family={Economia/Câmara\bibnamedelimb de\bibnamedelimb Comércio\bibnamedelimb Exterior/Cômite\bibnamedelimb Executivo\bibnamedelimb de\bibnamedelima Gestão},
+           familyi={E\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={Ministério},
+           giveni={M\bibinitperiod},
+           prefix={da},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{7e337d1bc0fcbda4cd240ea6348f4d5f}
+      \strng{fullhash}{7e337d1bc0fcbda4cd240ea6348f4d5f}
+      \strng{fullhashraw}{7e337d1bc0fcbda4cd240ea6348f4d5f}
+      \strng{bibnamehash}{7e337d1bc0fcbda4cd240ea6348f4d5f}
+      \strng{authorbibnamehash}{7e337d1bc0fcbda4cd240ea6348f4d5f}
+      \strng{authornamehash}{7e337d1bc0fcbda4cd240ea6348f4d5f}
+      \strng{authorfullhash}{7e337d1bc0fcbda4cd240ea6348f4d5f}
+      \strng{authorfullhashraw}{7e337d1bc0fcbda4cd240ea6348f4d5f}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em: [24 out. 2025]}
+      \field{title}{{RESOLUÇÃO GECEX N° 126, DE 8 DE DEZEMBRO DE 2020}}
+      \verb{urlraw}
+      \verb https://www.in.gov.br/web/dou/-/resolucao-gecex-n-126-de-8-de-dezembro-de-2020-293192472
+      \endverb
+      \verb{url}
+      \verb https://www.in.gov.br/web/dou/-/resolucao-gecex-n-126-de-8-de-dezembro-de-2020-293192472
+      \endverb
+    \endentry
+    \entry{trackingPoint}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=d468fd4fcd16d2f73314fb917cb1e2ea}{%
+           family={Dignan},
+           familyi={D\bibinitperiod},
+           given={Larry},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ZDNET}%
+      }
+      \strng{namehash}{d468fd4fcd16d2f73314fb917cb1e2ea}
+      \strng{fullhash}{d468fd4fcd16d2f73314fb917cb1e2ea}
+      \strng{fullhashraw}{d468fd4fcd16d2f73314fb917cb1e2ea}
+      \strng{bibnamehash}{d468fd4fcd16d2f73314fb917cb1e2ea}
+      \strng{authorbibnamehash}{d468fd4fcd16d2f73314fb917cb1e2ea}
+      \strng{authornamehash}{d468fd4fcd16d2f73314fb917cb1e2ea}
+      \strng{authorfullhash}{d468fd4fcd16d2f73314fb917cb1e2ea}
+      \strng{authorfullhashraw}{d468fd4fcd16d2f73314fb917cb1e2ea}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em: 17 nov. 2025}
+      \field{title}{The TrackingPoint 338TP, the Linux rifle that's accurate up to a mile}
+      \field{year}{2015}
+      \verb{urlraw}
+      \verb https://www.zdnet.com/article/the-trackingpoint-338tp-the-linux-rifle-thats-accurate-up-to-a-mile/
+      \endverb
+      \verb{url}
+      \verb https://www.zdnet.com/article/the-trackingpoint-338tp-the-linux-rifle-thats-accurate-up-to-a-mile/
+      \endverb
+    \endentry
+    \entry{ibgePNAD}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=7e9e302ff1f2d1c65b7ac89f55b3ed55}{%
+           family={Notícias},
+           familyi={N\bibinitperiod},
+           given={Agência\bibnamedelima IBGE},
+           giveni={A\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IBGE}%
+      }
+      \strng{namehash}{7e9e302ff1f2d1c65b7ac89f55b3ed55}
+      \strng{fullhash}{7e9e302ff1f2d1c65b7ac89f55b3ed55}
+      \strng{fullhashraw}{7e9e302ff1f2d1c65b7ac89f55b3ed55}
+      \strng{bibnamehash}{7e9e302ff1f2d1c65b7ac89f55b3ed55}
+      \strng{authorbibnamehash}{7e9e302ff1f2d1c65b7ac89f55b3ed55}
+      \strng{authornamehash}{7e9e302ff1f2d1c65b7ac89f55b3ed55}
+      \strng{authorfullhash}{7e9e302ff1f2d1c65b7ac89f55b3ed55}
+      \strng{authorfullhashraw}{7e9e302ff1f2d1c65b7ac89f55b3ed55}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em: [05 nov. 2025]}
+      \field{title}{Em 2023, massa de rendimentos e rendimento domiciliar per capita atingem recorde}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/39809-em-2023-massa-de-rendimentos-e-rendimento-domiciliar-per-capita-atingem-recorde
+      \endverb
+      \verb{url}
+      \verb https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/39809-em-2023-massa-de-rendimentos-e-rendimento-domiciliar-per-capita-atingem-recorde
+      \endverb
+    \endentry
+    \entry{autoScoring}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=0a29776bdf02d38c5338c7704baf74d3}{%
+           family={Ding},
+           familyi={D\bibinitperiod},
+           given={Penghua},
+           giveni={P\bibinitperiod}}}%
+        {{hash=7922f074ba4bb573243d6bbff3309edc}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Xuewu},
+           giveni={X\bibinitperiod}}}%
+        {{hash=f3299303bd17fa5962725e02db7c8652}{%
+           family={Fan},
+           familyi={F\bibinitperiod},
+           given={Xinnan},
+           giveni={X\bibinitperiod}}}%
+        {{hash=8611e08b530ecba47968d64a675c2db1}{%
+           family={Cheng},
+           familyi={C\bibinitperiod},
+           given={Qianqian},
+           giveni={Q\bibinitperiod}}}%
+      }
+      \strng{namehash}{5290b8681331b4bf09ca5e6f9e776519}
+      \strng{fullhash}{bca91206da71b1839fb14bb2fa661b64}
+      \strng{fullhashraw}{bca91206da71b1839fb14bb2fa661b64}
+      \strng{bibnamehash}{bca91206da71b1839fb14bb2fa661b64}
+      \strng{authorbibnamehash}{bca91206da71b1839fb14bb2fa661b64}
+      \strng{authornamehash}{5290b8681331b4bf09ca5e6f9e776519}
+      \strng{authorfullhash}{bca91206da71b1839fb14bb2fa661b64}
+      \strng{authorfullhashraw}{bca91206da71b1839fb14bb2fa661b64}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2009 IEEE International Conference on Automation and Logistics}
+      \field{title}{Design of automatic target-scoring system of shooting game based on computer vision}
+      \field{year}{2009}
+      \field{pages}{825\bibrangedash 830}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/ICAL.2009.5262810
+      \endverb
+      \keyw{Computer vision;Machine vision;Lighting;User interfaces;Feature extraction;Surveillance;Target recognition;Real time systems;Shape;Debugging;Moment Invariant;Image Processing;Pattern Recognition;Generalized Hough Transform;Auto-scoring System}
+    \endentry
+    \entry{geradorArUco}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=9e071902c9dff19eb508f669bc1b557c}{%
+           family={Kalachev},
+           familyi={K\bibinitperiod},
+           given={Oleg},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{9e071902c9dff19eb508f669bc1b557c}
+      \strng{fullhash}{9e071902c9dff19eb508f669bc1b557c}
+      \strng{fullhashraw}{9e071902c9dff19eb508f669bc1b557c}
+      \strng{bibnamehash}{9e071902c9dff19eb508f669bc1b557c}
+      \strng{authorbibnamehash}{9e071902c9dff19eb508f669bc1b557c}
+      \strng{authornamehash}{9e071902c9dff19eb508f669bc1b557c}
+      \strng{authorfullhash}{9e071902c9dff19eb508f669bc1b557c}
+      \strng{authorfullhashraw}{9e071902c9dff19eb508f669bc1b557c}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em: [05 nov. 2025]}
+      \field{title}{ArUco Marker Generator}
+      \verb{urlraw}
+      \verb https://chev.me/arucogen/
+      \endverb
+      \verb{url}
+      \verb https://chev.me/arucogen/
+      \endverb
+    \endentry
+    \entry{geradorPattern}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=599fdfd621aed10c5800264d2e6a4ba0}{%
+           family={{calib.io}},
+           familyi={c\bibinitperiod}}}%
+      }
+      \strng{namehash}{599fdfd621aed10c5800264d2e6a4ba0}
+      \strng{fullhash}{599fdfd621aed10c5800264d2e6a4ba0}
+      \strng{fullhashraw}{599fdfd621aed10c5800264d2e6a4ba0}
+      \strng{bibnamehash}{599fdfd621aed10c5800264d2e6a4ba0}
+      \strng{authorbibnamehash}{599fdfd621aed10c5800264d2e6a4ba0}
+      \strng{authornamehash}{599fdfd621aed10c5800264d2e6a4ba0}
+      \strng{authorfullhash}{599fdfd621aed10c5800264d2e6a4ba0}
+      \strng{authorfullhashraw}{599fdfd621aed10c5800264d2e6a4ba0}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em: [05 nov. 2025]}
+      \field{title}{Pattern Generator}
+      \verb{urlraw}
+      \verb https://calib.io/pages/camera-calibration-pattern-generator
+      \endverb
+      \verb{url}
+      \verb https://calib.io/pages/camera-calibration-pattern-generator
+      \endverb
+    \endentry
+    \entry{rifleMagnum}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=80ea85f8370d4784855b8bdefd4dca1b}{%
+           family={Ammunition},
+           familyi={A\bibinitperiod},
+           given={CBC\bibnamedelima Global},
+           giveni={C\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {CBC Brasil Distribuidora}%
+      }
+      \strng{namehash}{80ea85f8370d4784855b8bdefd4dca1b}
+      \strng{fullhash}{80ea85f8370d4784855b8bdefd4dca1b}
+      \strng{fullhashraw}{80ea85f8370d4784855b8bdefd4dca1b}
+      \strng{bibnamehash}{80ea85f8370d4784855b8bdefd4dca1b}
+      \strng{authorbibnamehash}{80ea85f8370d4784855b8bdefd4dca1b}
+      \strng{authornamehash}{80ea85f8370d4784855b8bdefd4dca1b}
+      \strng{authorfullhash}{80ea85f8370d4784855b8bdefd4dca1b}
+      \strng{authorfullhashraw}{80ea85f8370d4784855b8bdefd4dca1b}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em: 16 nov. 2025}
+      \field{title}{PISTOLAS | REVÓLVERES | ARMAS LONGAS}
+      \verb{urlraw}
+      \verb https://www.cbc.com.br/produto/rif-cbc-magnum-22wmr-21-c-p-ox-mad/
+      \endverb
+      \verb{url}
+      \verb https://www.cbc.com.br/produto/rif-cbc-magnum-22wmr-21-c-p-ox-mad/
+      \endverb
+    \endentry
+    \entry{fuzilTaurus}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=b9c94e8a87e3647c5a0fa4ff358ecc65}{%
+           family={Taurus},
+           familyi={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Taurus}%
+      }
+      \strng{namehash}{b9c94e8a87e3647c5a0fa4ff358ecc65}
+      \strng{fullhash}{b9c94e8a87e3647c5a0fa4ff358ecc65}
+      \strng{fullhashraw}{b9c94e8a87e3647c5a0fa4ff358ecc65}
+      \strng{bibnamehash}{b9c94e8a87e3647c5a0fa4ff358ecc65}
+      \strng{authorbibnamehash}{b9c94e8a87e3647c5a0fa4ff358ecc65}
+      \strng{authornamehash}{b9c94e8a87e3647c5a0fa4ff358ecc65}
+      \strng{authorfullhash}{b9c94e8a87e3647c5a0fa4ff358ecc65}
+      \strng{authorfullhashraw}{b9c94e8a87e3647c5a0fa4ff358ecc65}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em: 16 nov. 2025}
+      \field{title}{T4 SEMI 14,5}
+      \verb{urlraw}
+      \verb https://taurusarmas.com.br/pt/produtos/armas-taticas/fuzil-t4-145-semi-auto-cal-556-nato
+      \endverb
+      \verb{url}
+      \verb https://taurusarmas.com.br/pt/produtos/armas-taticas/fuzil-t4-145-semi-auto-cal-556-nato
+      \endverb
+    \endentry
+    \entry{carabinaPCP}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=6ea4dd21ea53ac07616ca610655f7b93}{%
+           family={Airsoft},
+           familyi={A\bibinitperiod},
+           given={Rossi\bibnamedelima Airguns},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {HATSAN ARMS COMPANY}%
+      }
+      \strng{namehash}{6ea4dd21ea53ac07616ca610655f7b93}
+      \strng{fullhash}{6ea4dd21ea53ac07616ca610655f7b93}
+      \strng{fullhashraw}{6ea4dd21ea53ac07616ca610655f7b93}
+      \strng{bibnamehash}{6ea4dd21ea53ac07616ca610655f7b93}
+      \strng{authorbibnamehash}{6ea4dd21ea53ac07616ca610655f7b93}
+      \strng{authornamehash}{6ea4dd21ea53ac07616ca610655f7b93}
+      \strng{authorfullhash}{6ea4dd21ea53ac07616ca610655f7b93}
+      \strng{authorfullhashraw}{6ea4dd21ea53ac07616ca610655f7b93}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em: 17 nov. 2025}
+      \field{title}{Carabina de Pressão PCP Hatsan Flash}
+      \verb{urlraw}
+      \verb https://www.rossi.com.br/pt-br/produtos/38123/
+      \endverb
+      \verb{url}
+      \verb https://www.rossi.com.br/pt-br/produtos/38123/
+      \endverb
+    \endentry
+    \entry{alvosPadronizados}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=94050832dd6fc4a957f820d27022cb41}{%
+           family={Atiradores\bibnamedelima Desportivos},
+           familyi={A\bibinitperiod\bibinitdelim D\bibinitperiod},
+           given={Liga\bibnamedelima Nacional},
+           giveni={L\bibinitperiod\bibinitdelim N\bibinitperiod},
+           prefix={dos},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{94050832dd6fc4a957f820d27022cb41}
+      \strng{fullhash}{94050832dd6fc4a957f820d27022cb41}
+      \strng{fullhashraw}{94050832dd6fc4a957f820d27022cb41}
+      \strng{bibnamehash}{94050832dd6fc4a957f820d27022cb41}
+      \strng{authorbibnamehash}{94050832dd6fc4a957f820d27022cb41}
+      \strng{authornamehash}{94050832dd6fc4a957f820d27022cb41}
+      \strng{authorfullhash}{94050832dd6fc4a957f820d27022cb41}
+      \strng{authorfullhashraw}{94050832dd6fc4a957f820d27022cb41}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em: [24 out. 2025]}
+      \field{title}{GUIA COMPLETO DE ALVOS}
+      \verb{urlraw}
+      \verb https://www.linade.com.br/wp-content/uploads/Guia-completo-de-alvos-das-competicoes-2025-LINADE-28042025-1703.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.linade.com.br/wp-content/uploads/Guia-completo-de-alvos-das-competicoes-2025-LINADE-28042025-1703.pdf
+      \endverb
+    \endentry
+    \entry{metodoZhang}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=5ee5d3d5470ac29a2e7c8df70ed54725}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{5ee5d3d5470ac29a2e7c8df70ed54725}
+      \strng{fullhash}{5ee5d3d5470ac29a2e7c8df70ed54725}
+      \strng{fullhashraw}{5ee5d3d5470ac29a2e7c8df70ed54725}
+      \strng{bibnamehash}{5ee5d3d5470ac29a2e7c8df70ed54725}
+      \strng{authorbibnamehash}{5ee5d3d5470ac29a2e7c8df70ed54725}
+      \strng{authornamehash}{5ee5d3d5470ac29a2e7c8df70ed54725}
+      \strng{authorfullhash}{5ee5d3d5470ac29a2e7c8df70ed54725}
+      \strng{authorfullhashraw}{5ee5d3d5470ac29a2e7c8df70ed54725}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Pattern Analysis and Machine Intelligence}
+      \field{number}{11}
+      \field{title}{A flexible new technique for camera calibration}
+      \field{volume}{22}
+      \field{year}{2000}
+      \field{pages}{1330\bibrangedash 1334}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1109/34.888718
+      \endverb
+      \keyw{Cameras;Calibration;Computer vision;Layout;Lenses;Nonlinear distortion;Closed-form solution;Maximum likelihood estimation;Computer simulation;Testing}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt-BR">
+<head>
+    <meta charset="utf-8"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+        body { background-color: #111411; font-family: 'Inter', sans-serif; color: #e1e3de; }
+        .hidden { display: none !important; }
+        .input-cal { background: #0c0f0c; border: 1px solid #414942; padding: 12px; border-radius: 4px; width: 100%; color: white; margin-bottom: 1rem; }
+    </style>
+</head>
+<body class="overflow-hidden h-screen flex flex-col">
+
+    <header class="bg-[#1d201d] border-b border-[#414942] flex justify-between items-center px-6 h-16 shrink-0">
+        <div class="font-bold tracking-widest text-[#9dd3aa]">Calibration Tool</div>
+        <div id="connection-status" class="text-xs uppercase opacity-50 text-[#9dd3aa]">Iniciando...</div>
+        <div id="user-display" class="text-xs uppercase opacity-50 ml-4">Aguardando Login</div>
+    </header>
+
+    <main id="container-principal" class="flex-1 relative overflow-hidden">
+        
+        <section id="tela-login" class="w-full h-full flex flex-col items-center justify-center bg-[#111411]">
+            <div class="w-full max-w-sm p-8 bg-[#1d201d] border border-[#414942] rounded shadow-lg relative">
+                <div class="absolute top-0 left-0 w-full h-1 bg-[#4a7c59]"></div>
+                <div class="flex flex-col items-center mb-6">
+                    <span class="material-symbols-outlined text-[#9dd3aa] text-4xl mb-2">radar</span>
+                    <h2 class="text-lg font-bold text-center tracking-widest text-[#9dd3aa]">CALIBRATION TOOL</h2>
+                    <p class="text-[10px] uppercase opacity-50 tracking-widest">System Access</p>
+                </div>
+                
+                <div id="erro-login" class="hidden w-full bg-red-950/40 border border-red-800 text-red-400 p-3 mb-4 text-xs flex items-center gap-2">
+                    <span class="material-symbols-outlined text-sm">warning</span>
+                    <span id="msg-erro-login">Usuário ou senha incorretos</span>
+                </div>
+
+                <div class="mb-4">
+                    <label class="text-[10px] uppercase opacity-60 block mb-1">Usuário *</label>
+                    <input id="login-nome" type="text" placeholder="Insira seu identificador" class="input-cal !mb-0 focus:border-[#9dd3aa] outline-none">
+                </div>
+                <div class="mb-6">
+                    <label class="text-[10px] uppercase opacity-60 block mb-1">Senha *</label>
+                    <input id="login-senha" type="password" placeholder="••••••••" class="input-cal !mb-0 focus:border-[#9dd3aa] outline-none">
+                </div>
+                
+                <button onclick="realizarLogin()" class="w-full py-3 bg-[#4a7c59] text-white font-bold uppercase text-sm hover:brightness-110 mb-6 transition-all">Entrar</button>
+                
+                <div class="text-center text-xs flex flex-col gap-3">
+                    <div>
+                        <span class="cursor-pointer text-white/60 hover:text-[#9dd3aa] transition-colors duration-200" onclick="navegarPara('tela-esqueci-senha')">Esqueci a senha</span>
+                    </div>
+                    <div>
+                        <span class="text-white/60">Não tem conta?</span> 
+                        <span class="text-[#9dd3aa] font-bold cursor-pointer hover:brightness-125 transition-all duration-200" onclick="navegarPara('tela-cadastro')">Cadastre-se</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tela-cadastro" class="w-full h-full hidden flex-col items-center justify-center bg-[#111411]">
+            <div class="w-full max-w-sm p-8 bg-[#1d201d] border border-[#414942] rounded shadow-lg relative">
+                <div class="absolute top-0 left-0 w-full h-1 bg-[#4a7c59]"></div>
+                <div class="flex flex-col items-center mb-6">
+                    <span class="material-symbols-outlined text-[#9dd3aa] text-3xl mb-1">person_add</span>
+                    <h2 class="text-md font-bold text-center tracking-widest text-[#e1e3de]">CRIAR CONTA</h2>
+                </div>
+                
+                <div id="msg-cadastro" class="hidden w-full p-3 mb-4 text-xs flex items-center gap-2 border"></div>
+
+                <div class="mb-3">
+                    <label class="text-[10px] uppercase opacity-60 block mb-1">Identificador (Usuário) *</label>
+                    <input id="cad-nome" type="text" class="input-cal !mb-0 outline-none">
+                </div>
+                <div class="mb-3">
+                    <label class="text-[10px] uppercase opacity-60 block mb-1">E-mail *</label>
+                    <input id="cad-email" type="email" class="input-cal !mb-0 outline-none">
+                </div>
+                <div class="mb-3">
+                    <label class="text-[10px] uppercase opacity-60 block mb-1">Senha *</label>
+                    <input id="cad-senha" type="password" class="input-cal !mb-0 outline-none">
+                </div>
+                <div class="mb-6">
+                    <label class="text-[10px] uppercase opacity-60 block mb-1">Confirmar Senha *</label>
+                    <input id="cad-senha-conf" type="password" class="input-cal !mb-0 outline-none">
+                </div>
+                
+                <button onclick="realizarCadastro()" class="w-full py-3 bg-[#4a7c59] text-white font-bold uppercase text-sm hover:brightness-110 mb-4 transition-all">Cadastrar</button>
+                <div class="text-center text-xs mt-2">
+                    <span class="cursor-pointer text-white/60 hover:text-[#9dd3aa] transition-colors duration-200" onclick="navegarPara('tela-login')">Já tem conta? Faça login</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="tela-esqueci-senha" class="w-full h-full hidden flex-col items-center justify-center bg-[#111411]">
+            <div class="w-full max-w-sm p-8 bg-[#1d201d] border border-[#414942] rounded shadow-lg relative">
+                <div class="absolute top-0 left-0 w-full h-1 bg-[#4a7c59]"></div>
+                <div class="flex flex-col items-center mb-6">
+                    <span class="material-symbols-outlined text-[#9dd3aa] text-3xl mb-1">lock_reset</span>
+                    <h2 class="text-md font-bold text-center tracking-widest text-[#e1e3de]">REDEFINIR SENHA</h2>
+                    <p class="text-xs text-center opacity-60 mt-2">Insira o e-mail cadastrado para recuperar seu acesso.</p>
+                </div>
+                
+                <div id="msg-recuperacao" class="hidden w-full p-3 mb-4 text-xs flex items-center gap-2 border"></div>
+
+                <div class="mb-6">
+                    <label class="text-[10px] uppercase opacity-60 block mb-1">E-mail *</label>
+                    <input id="rec-email" type="email" placeholder="nome@email.com" class="input-cal !mb-0 outline-none">
+                </div>
+                
+                <button onclick="realizarRecuperacao()" class="w-full py-3 bg-[#4a7c59] text-white font-bold uppercase text-sm hover:brightness-110 mb-4 transition-all flex items-center justify-center gap-2">
+                    <span>Recuperar Acesso</span>
+                </button>
+                <div class="text-center text-xs mt-2">
+                    <span class="cursor-pointer text-white/60 hover:text-[#9dd3aa] transition-colors duration-200 flex justify-center items-center gap-1" onclick="navegarPara('tela-login')">
+                        <span class="material-symbols-outlined text-[14px]">arrow_back</span> Voltar para o login
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <section id="tela-dashboard" class="w-full h-full hidden flex-col items-center justify-center gap-6 bg-[#111411]">
+            <h1 class="text-2xl font-bold mb-4">Bem-vindo, <span id="span-nome-user"></span></h1>
+            <button onclick="navegarPara('tela-setup')" class="w-64 py-6 bg-[#1d201d] border border-[#414942] flex flex-col items-center hover:bg-[#2a2a2a]">
+                <span class="material-symbols-outlined text-4xl text-[#9dd3aa]">target</span>
+                <span class="mt-2 font-bold uppercase tracking-wider">Nova Calibração</span>
+            </button>
+            <button onclick="carregarHistorico()" class="w-64 py-6 bg-[#1d201d] border border-[#414942] flex flex-col items-center hover:bg-[#2a2a2a]">
+                <span class="material-symbols-outlined text-4xl text-blue-400">history</span>
+                <span class="mt-2 font-bold uppercase tracking-wider">Ver Histórico</span>
+            </button>
+            <button onclick="location.reload()" class="w-64 py-4 mt-8 opacity-50 hover:opacity-100 uppercase text-xs font-bold">Sair da Conta</button>
+        </section>
+
+        <section id="tela-setup" class="w-full h-full hidden flex flex-col items-center justify-center bg-[#111411]">
+            <div class="w-full max-w-md p-8 bg-[#191c19] border border-[#414942]">
+                <h2 class="text-xl mb-6 font-bold uppercase text-[#9dd3aa]">Setup de Calibração</h2>
+                <div>
+                    <label class="text-xs uppercase opacity-60 block mb-2">Distância do Alvo (Metros)</label>
+                    <input id="setup-distancia" type="number" value="10" class="input-cal">
+                </div>
+                <div>
+                    <label class="text-xs uppercase opacity-60 block mb-2">Valor do Clique (MOA)</label>
+                    <select id="setup-clique" class="input-cal">
+                        <option value="0.5">1/2 MOA</option>
+                        <option value="0.25">1/4 MOA</option>
+                        <option value="0.125">1/8 MOA</option>
+                        <option value="0.1">1/10 MIL (0.1 MRAD)</option>
+                    </select>
+                </div>
+                <button onclick="iniciarCalibracao()" class="w-full py-4 mt-4 bg-[#4a7c59] font-bold uppercase">Ligar Câmera</button>
+                <button onclick="navegarPara('tela-dashboard')" class="w-full py-3 mt-2 bg-[#414942] font-bold uppercase text-xs">Voltar</button>
+            </div>
+        </section>
+
+        <section id="tela-historico" class="w-full h-full hidden flex-col p-8 bg-[#111411]">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold uppercase">Histórico de Disparos</h2>
+                <button onclick="navegarPara('tela-dashboard')" class="text-[#9dd3aa] uppercase text-sm font-bold border border-[#9dd3aa] px-4 py-2 rounded">Voltar ao Menu</button>
+            </div>
+            <div class="flex-1 overflow-y-auto bg-[#0c0f0c] border border-[#414942]">
+                <table class="w-full text-left text-sm">
+                    <thead>
+                        <tr class="text-[10px] uppercase opacity-60 border-b border-[#414942]">
+                            <th class="text-left pb-4">Data</th>
+                            <th class="text-left pb-4">Arma</th> 
+                            <th class="text-left pb-4">Distância</th>
+                            <th class="text-left pb-4">Torre</th>
+                            <th class="text-left pb-4">Correção H</th>
+                            <th class="text-left pb-4">Correção V</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela-corpo-historico"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="tela-passo-3" class="w-full h-full hidden flex">
+            <aside id="aside-passo3" class="w-[300px] bg-[#191c19] border-r border-[#414942] p-6 flex flex-col">
+                <h2 class="text-[#9dd3aa] uppercase text-sm font-bold mb-4">Definir POA</h2>
+                <div id="status-box" class="bg-[#0c0f0c] p-4 text-xs border border-[#414942] rounded mb-4">
+                    Aguarde a detecção do alvo...
+                </div>
+                <button id="btn-confirmar-poa" disabled onclick="navegarPara('tela-passo-4')" 
+                        class="mt-auto w-full py-4 bg-[#414942] text-white/30 uppercase font-bold transition-all cursor-not-allowed">
+                    Confirmar POA
+                </button>
+            </aside>
+            <div class="flex-1 bg-black flex items-center justify-center relative cursor-crosshair">
+                <button onclick="document.getElementById('aside-passo3').classList.toggle('hidden')" class="absolute top-4 right-4 bg-black/50 text-[#e1e3de] p-2 rounded-full hover:bg-[#9dd3aa] hover:text-[#111411] transition-colors z-10 flex items-center justify-center" title="Expandir/Recolher Menu">
+                    <span class="material-symbols-outlined">fullscreen</span>
+                </button>
+                <img id="feed-camera" class="w-full h-full object-contain" src="" onclick="capturarClique(event)" />
+            </div>
+        </section>
+
+        <section id="tela-passo-4" class="w-full h-full hidden flex bg-[#111411]">
+            <div class="flex-1 bg-black flex items-center justify-center">
+                <img id="feed-camera-ref" class="w-full h-full object-contain" src="" />
+            </div>
+            <aside class="w-[300px] bg-[#191c19] border-l border-[#414942] p-6 flex flex-col">
+                <h2 class="text-[#9dd3aa] uppercase text-sm font-bold mb-4">Salvar Referência</h2>
+                <p class="text-xs opacity-60 mb-6">Mantenha a luneta imóvel e salve o frame para análise de impacto.</p>
+                <button onclick="salvarReferenciaFrame()" class="mt-auto w-full py-4 bg-[#4a7c59] text-[#e1ffe5] uppercase font-bold shadow-lg hover:brightness-110">
+                    Salvar Frame
+                </button>
+            </aside>
+        </section>
+
+        <section id="tela-passo-5" class="w-full h-full hidden flex bg-[#111411]">
+            <div class="flex-1 bg-black flex items-center justify-center relative">
+                <img id="feed-camera-poi" class="w-full h-full object-contain" src="" />
+            </div>
+            <aside class="w-[300px] bg-[#191c19] border-l border-[#414942] p-6 flex flex-col">
+                <h2 class="text-[#9dd3aa] uppercase text-sm font-bold mb-4">Confirmar POI</h2>
+                <p class="text-xs opacity-60 mb-6">Aguardando disparo. O sistema está escaneando alterações de contraste.</p>
+                
+                <div id="status-impacto" class="bg-[#2a2a2a] p-4 text-xs border border-[#414942] rounded mb-4 animate-pulse">
+                    Monitorando alvo vivo...
+                </div>
+                
+                <div id="box-confirmacao" class="hidden flex-col gap-2 mt-auto">
+                    <p class="text-sm text-center mb-2 font-bold">O impacto em azul está correto?</p>
+                    <button onClick="confirmarImpactoFuro()" class="w-full py-3 bg-[#4a7c59] text-white uppercase font-bold text-sm">Sim, Confirmar</button>
+                    <button onclick="reiniciarEscaneamento()" class="w-full py-3 bg-[#414942] text-white uppercase font-bold text-sm hover:brightness-125">Não, Ignorar</button>
+                </div>
+            </aside>
+        </section>
+
+        <section id="tela-passo-6" class="w-full h-full hidden flex-col items-center justify-center p-8 bg-[#111411] overflow-y-auto">
+            <div class="w-full max-w-2xl text-center mb-10">
+                <h1 class="text-3xl font-bold text-[#e1e3de] mb-2 uppercase tracking-widest">Feedback de correção</h1>
+            </div>
+
+            <div class="w-full max-w-2xl bg-[#1d201d] p-8 border border-[#414942] relative">
+                <div class="absolute top-0 left-0 w-full h-1 bg-[#9dd3aa]"></div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-[#0c0f0c] p-8 border border-[#414942] flex flex-col items-center justify-center text-center">
+                        <span id="icone-dir-y" class="material-symbols-outlined text-[#9dd3aa] text-5xl mb-4">arrow_upward</span>
+                        <div id="valor-clique-y" class="text-3xl font-bold text-[#e1e3de] tracking-wider">-- Cliques</div>
+                        <div id="texto-dir-y" class="text-xs text-[#8b938a] uppercase mt-2 font-bold tracking-widest">Ajuste para --</div>
+                    </div>
+                    
+                    <div class="bg-[#0c0f0c] p-8 border border-[#414942] flex flex-col items-center justify-center text-center">
+                        <span id="icone-dir-x" class="material-symbols-outlined text-[#9dd3aa] text-5xl mb-4">arrow_forward</span>
+                        <div id="valor-clique-x" class="text-3xl font-bold text-[#e1e3de] tracking-wider">-- Cliques</div>
+                        <div id="texto-dir-x" class="text-xs text-[#8b938a] uppercase mt-2 font-bold tracking-widest">Ajuste para --</div>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-between py-4 border-y border-[#414942] mb-8">
+                    <span class="text-sm text-[#c1c9bf] uppercase font-bold tracking-widest">Desvio Linear Calculado</span>
+                    <span id="valor-desvio-linear" class="text-lg font-bold text-[#9dd3aa]">-- mm</span>
+                </div>
+                
+                <div id="erro-arma" class="hidden w-full bg-red-950/40 border border-red-800 text-red-400 p-3 mb-4 text-xs flex items-center gap-2">
+                    <span class="material-symbols-outlined text-sm">warning</span>
+                    <span id="msg-erro-arma"></span>
+                </div>
+
+                <div class="mb-6">
+                    <label class="text-[10px] uppercase opacity-60 block mb-1">Identificação do Equipamento (Arma) *</label>
+                    <input id="input-arma-final" type="text" placeholder="Ex: Carabina Hatsan 6.35mm" 
+                           class="w-full bg-[#111411] border border-[#414942] p-3 text-white outline-none focus:border-[#9dd3aa] transition-all">
+                </div>
+
+                <div class="flex flex-col gap-3">
+                    <button onclick="concluirComArma(true)" class="w-full bg-[#1d201d] border border-[#9dd3aa] text-[#9dd3aa] h-14 flex items-center justify-center gap-2 uppercase tracking-widest font-bold hover:bg-[#9dd3aa] hover:text-[#111411] transition-colors">
+                        <span class="material-symbols-outlined">restart_alt</span> Novo Disparo (Manter POA)
+                    </button>
+                    <button onclick="concluirComArma(false)" class="w-full bg-[#4a7c59] text-white h-14 flex items-center justify-center gap-2 uppercase tracking-widest font-bold hover:brightness-110">
+                        <span class="material-symbols-outlined">check_circle</span> Concluir e Salvar
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // --- ROTEADOR E API ---
+        function navegarPara(idTela) {
+            const telas = ['tela-login', 'tela-cadastro', 'tela-esqueci-senha', 'tela-dashboard', 'tela-setup', 'tela-historico', 'tela-passo-3', 'tela-passo-4', 'tela-passo-5', 'tela-passo-6'];            
+            // Esconde todas as telas
+            telas.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
+                    el.classList.add('hidden');
+                    el.classList.remove('flex');
+                }
+            });
+            
+            // Mostra a tela alvo garantindo que ela use o Flexbox para centralização
+            const target = document.getElementById(idTela);
+            if (target) {
+                target.classList.remove('hidden');
+                target.classList.add('flex'); 
+            }
+        }
+
+        // Evento que aciona o sistema assim que abre a janela
+        window.addEventListener('pywebviewready', () => {
+            document.getElementById('connection-status').innerText = "SISTEMA ONLINE";
+            navegarPara('tela-login');
+        });
+
+        // Funções de Controle de Mensagens UI
+        function mostrarMensagemUI(idElemento, status, mensagem) {
+            const el = document.getElementById(idElemento);
+            el.innerHTML = `<span class="material-symbols-outlined text-sm">${status === 'erro' ? 'warning' : 'check_circle'}</span> <span>${mensagem}</span>`;
+            el.className = `w-full p-3 mb-4 text-xs flex items-center gap-2 border ${status === 'erro' ? 'bg-red-950/40 border-red-800 text-red-400' : 'bg-green-950/40 border-green-800 text-green-400'}`;
+            el.classList.remove('hidden');
+            setTimeout(() => el.classList.add('hidden'), 5000); // Esconde após 5 segundos
+        }
+
+        function realizarLogin() {
+            const nome = document.getElementById('login-nome').value;
+            const senha = document.getElementById('login-senha').value;
+            
+            if(!nome || !senha) {
+                mostrarMensagemUI('erro-login', 'erro', 'Preencha todos os campos.');
+                return;
+            }
+
+            window.pywebview.api.fazer_login(nome, senha).then(res => {
+                if(res.status === 'sucesso') {
+                    document.getElementById('user-display').innerText = "Atirador: " + res.user;
+                    document.getElementById('span-nome-user').innerText = res.user;
+                    navegarPara('tela-dashboard');
+                } else {
+                    mostrarMensagemUI('erro-login', 'erro', res.msg);
+                }
+            });
+        }
+
+        function realizarCadastro() {
+            const nome = document.getElementById('cad-nome').value;
+            const email = document.getElementById('cad-email').value;
+            const senha = document.getElementById('cad-senha').value;
+            const senhaConf = document.getElementById('cad-senha-conf').value;
+            
+            if(!nome || !email || !senha || !senhaConf) {
+                mostrarMensagemUI('msg-cadastro', 'erro', 'Preencha todos os campos obrigatórios.');
+                return;
+            }
+
+            if(senha !== senhaConf) {
+                mostrarMensagemUI('msg-cadastro', 'erro', 'As senhas não coincidem.');
+                return;
+            }
+
+            window.pywebview.api.cadastrar_usuario(nome, email, senha).then(res => {
+                if(res.status === 'sucesso') {
+                    mostrarMensagemUI('msg-cadastro', 'sucesso', res.msg);
+                    setTimeout(() => navegarPara('tela-login'), 2000);
+                } else {
+                    mostrarMensagemUI('msg-cadastro', 'erro', res.msg);
+                }
+            });
+        }
+
+        function realizarRecuperacao() {
+            const email = document.getElementById('rec-email').value;
+            if(!email) {
+                mostrarMensagemUI('msg-recuperacao', 'erro', 'Insira seu e-mail.');
+                return;
+            }
+            window.pywebview.api.recuperar_senha(email).then(res => {
+                mostrarMensagemUI('msg-recuperacao', res.status, res.msg);
+            });
+        }
+
+        function tiroDeConfirmacao() {
+            window.pywebview.api.preparar_novo_disparo().then(res => {
+                if(res.status === 'sucesso') {
+                    // Volta direto para a tela de Salvar Referência (Passo 4)
+                    // O POA continua salvo no backend e visível no vídeo
+                    navegarPara('tela-passo-4');
+                }
+            });
+        }
+
+        // --- SETUP E HISTÓRICO ---
+        let loopCameraIniciado = false;
+
+        function iniciarCalibracao() {
+            const dist = document.getElementById('setup-distancia').value;
+            const clique = document.getElementById('setup-clique').value;
+            window.pywebview.api.salvar_setup_sessao(dist, clique).then(() => {
+                window.pywebview.api.iniciar_sistema().then(() => {
+                    navegarPara('tela-passo-3');
+                    if (!loopCameraIniciado) {
+                        loopCameraIniciado = true;
+                        requestAnimationFrame(atualizarFrame);
+                    }
+                });
+            });
+        }
+
+        function carregarHistorico() {
+            window.pywebview.api.buscar_historico().then(dados => {
+                const corpo = document.getElementById('tabela-corpo-historico');
+                corpo.innerHTML = dados.map(item => `
+                    <tr class="border-b border-[#414942] hover:bg-[#191c19]">
+                        <td class="py-4 pr-4">${item.data}</td>
+                        <td class="py-4 pr-4">${item.arma}</td>
+                        <td class="py-4 pr-4">${item.distancia}m</td>
+                        <td class="py-4 pr-4">${item.clique}</td>
+                        <td class="py-4 pr-4">${item.cl_h} Cl. ${item.dir_h}</td>
+                        <td class="py-4 pr-4">${item.cl_v} Cl. ${item.dir_v}</td>
+                    </tr>
+                `).join('');
+                navegarPara('tela-historico');
+            });
+        }
+
+        // --- MOTOR DE CÂMERA ---
+        let scannerAtivo = null;
+
+        function atualizarFrame() {
+            window.pywebview.api.solicitar_frame().then(base64 => {
+                if (base64) {
+                    document.getElementById('feed-camera').src = base64;
+                    document.getElementById('feed-camera-ref').src = base64;
+                    document.getElementById('feed-camera-poi').src = base64;
+                }
+                requestAnimationFrame(atualizarFrame);
+            });
+        }
+
+        function capturarClique(event) {
+            const img = document.getElementById('feed-camera');
+            const rect = img.getBoundingClientRect();
+            const nw = img.naturalWidth, nh = img.naturalHeight;
+            const ratio = Math.min(rect.width / nw, rect.height / nh);
+            const renderW = nw * ratio, renderH = nh * ratio;
+            const offsetX = (rect.width - renderW) / 2, offsetY = (rect.height - renderH) / 2;
+            const x = (event.clientX - rect.left - offsetX) / renderW;
+            const y = (event.clientY - rect.top - offsetY) / renderH;
+
+            if (x >= 0 && x <= 1 && y >= 0 && y <= 1) {
+                window.pywebview.api.registrar_clique_tela(x, y).then(res => {
+                    const box = document.getElementById('status-box');
+                    const btn = document.getElementById('btn-confirmar-poa');
+                    box.innerText = res.msg;
+                    if (res.status === 'sucesso') {
+                        box.classList.add('text-[#9dd3aa]');
+                        btn.disabled = false;
+                        btn.classList.remove('bg-[#414942]', 'text-white/30', 'cursor-not-allowed');
+                        btn.classList.add('bg-[#4a7c59]', 'text-white');
+                    }
+                });
+            }
+        }
+
+        function salvarReferenciaFrame() {
+            if (window.pywebview) {
+                window.pywebview.api.salvar_referencia_atual().then(function(res) {
+                    if (res.status === 'sucesso') {
+                        navegarPara('tela-passo-5');
+                        scannerAtivo = setInterval(verificarImpactoContinuo, 800); 
+                    } else {
+                        alert(res.msg); 
+                    }
+                });
+            }
+        }
+
+        function verificarImpactoContinuo() {
+            if (window.pywebview) {
+                window.pywebview.api.verificar_impacto().then(res => {
+                    if (res.status === 'sucesso') {
+                        document.getElementById('status-impacto').classList.remove('animate-pulse');
+                        document.getElementById('status-impacto').innerHTML = `<span class="text-blue-400 font-bold">${res.msg}</span>`;
+                        document.getElementById('box-confirmacao').classList.remove('hidden');
+                        document.getElementById('box-confirmacao').classList.add('flex');
+                        clearInterval(scannerAtivo);
+                    }
+                });
+            }
+        }
+
+        function reiniciarEscaneamento() {
+            if (window.pywebview) {
+                window.pywebview.api.ignorar_impacto().then(() => {
+                    document.getElementById('box-confirmacao').classList.add('hidden');
+                    document.getElementById('box-confirmacao').classList.remove('flex');
+                    document.getElementById('status-impacto').innerText = "Monitorando alvo vivo...";
+                    document.getElementById('status-impacto').classList.add('animate-pulse');
+                    scannerAtivo = setInterval(verificarImpactoContinuo, 800); 
+                });
+            }
+        }
+
+        let ultimosDadosCalibracao = null; // Variável global para guardar o resultado temporário
+
+        function confirmarImpactoFuro() {
+            window.pywebview.api.calcular_correcao().then(res => {
+                if(res.status === 'sucesso') {
+                    ultimosDadosCalibracao = res;
+                    document.getElementById('valor-clique-y').innerText = res.cly + " Cliques";
+                    document.getElementById('texto-dir-y').innerText = "Ajuste para " + res.dir_y;
+                    document.getElementById('icone-dir-y').innerText = res.dir_y === "Cima" ? "arrow_upward" : "arrow_downward";
+
+                    document.getElementById('valor-clique-x').innerText = res.clx + " Cliques";
+                    document.getElementById('texto-dir-x').innerText = "Ajuste para " + res.dir_x;
+                    document.getElementById('icone-dir-x').innerText = res.dir_x === "Direita" ? "arrow_forward" : "arrow_back";
+
+                    document.getElementById('valor-desvio-linear').innerText = res.desvio + " mm";
+                    
+                    navegarPara('tela-passo-6');
+                }
+            });
+        }
+
+        function concluirComArma(eNovoDisparo) {
+            const nomeArma = document.getElementById('input-arma-final').value;
+            
+            if(!nomeArma) {
+                mostrarMensagemUI('erro-arma', 'erro', 'Por favor, identifique a arma para o histórico.');
+                return;
+            }
+
+            const payload = {
+                ...ultimosDadosCalibracao,
+                distancia: document.getElementById('setup-distancia').value,
+                clique_tipo: document.getElementById('setup-clique').options[document.getElementById('setup-clique').selectedIndex].text
+            };
+
+            window.pywebview.api.salvar_no_historico(nomeArma, payload).then(res => {
+                if(res.status === 'sucesso') {
+                    if(eNovoDisparo) {
+                        tiroDeConfirmacao();
+                    } else {
+                        repetirCiclo(); // Volta ao menu
+                    }
+                } else {
+                    mostrarMensagemUI('erro-arma', 'erro', "Erro ao salvar: " + res.msg);
+                }
+            });
+        }
+        
+
+        function repetirCiclo() {
+            if (window.pywebview) {
+                window.pywebview.api.reiniciar_calibracao().then(res => {
+                    navegarPara('tela-dashboard');
+                    const btn = document.getElementById('btn-confirmar-poa');
+                    btn.disabled = true;
+                    btn.classList.add('bg-[#414942]', 'text-white/30', 'cursor-not-allowed');
+                    btn.classList.remove('bg-[#4a7c59]', 'text-white');
+                    
+                    const box = document.getElementById('status-box');
+                    box.innerText = "Aguarde a detecção do alvo...";
+                    box.classList.remove('text-[#9dd3aa]');
+                });
+            }
+        }
+    </script>
+</body>
+</html>

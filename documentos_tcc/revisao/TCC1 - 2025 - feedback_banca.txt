@@ -1,0 +1,137 @@
+﻿Professor/Membro da Banca: Plinio Thomaz Aquino Junior
+
+
+Artigo: Auxílio de Calibragem de Mira Inteligente para Fins Esportivos
+
+
+Autor: Mateus Rocha
+
+
+Data: 02 de Dezembro de 2025
+
+
+1. VISÃO GERAL E QUALIDADE DA PROPOSTA
+
+
+O desafio nos meus comentários é transformar essa ideia promissora em um projeto de pesquisa e desenvolvimento com a profundidade e a reprodutibilidade exigidas em uma banca.
+
+
+Melhoria de Redação: O texto apresenta um tom um pouco informal e repetições que devem ser corrigidas para um artigo científico.
+Exemplo de Correção: O trecho "gosta de brincar com armas de pressão em simulações realistas"  deve ser substituído por algo como: "que se dedicam à prática esportiva com armas de pressão em simulações realistas".
+
+
+Exemplo de Coerência: A seção de Materiais  mistura a justificativa da escolha da câmera com o método de calibração. Essa justificativa deve ser condensada e movida para a seção de Metodologia, focando apenas nos materiais na seção de Materiais.
+
+
+2. PONTOS OBSCUROS OU NÃO CLAROS NA PROPOSTA
+
+
+A clareza sobre a geometria do sistema e a robustez do método são os pontos mais obscuros que precisam ser resolvidos antes de avançar para a implementação.
+
+
+Referência do Ponto de Mira (POA) 
+O resumo menciona que a câmera é "Posicionada ao lado da arma". 
+Como o sistema sabe onde o atirador estava mirando (POA)? 
+O POA é o centro do alvo? 
+Se sim, isso pressupõe que a arma estava perfeitamente alinhada com o centro do alvo, o que não é realista em um processo de calibração. 
+O sistema deve ter um método claro para identificar o POA. 
+Se a mira da luneta não for visível, o POA deve ser um ponto de referência fixo na imagem, e a precisão da mira do atirador deve ser desconsiderada.
+
+
+
+
+Robustez da Subtração de Imagem 
+O método de detecção do impacto (POI) é a "Subtração de Imagem" . 
+Este método é extremamente sensível a movimento. 
+O projeto precisa detalhar como será mitigado o recoil de armas de fogo (Rifle CBC 7122M, Fuzil Taurus T4) e o movimento da câmera causado pelo disparo. 
+A câmera deve ser fixada de forma independente da arma, ou o sistema deve ser capaz de registrar o alvo antes e depois do disparo com uma precisão sub-pixel de alinhamento.
+
+
+
+
+Calibração e Distância 
+A Homografia  é importante para converter pixels em milímetros. 
+A matriz de Homografia é válida apenas para um plano e uma distância específica. 
+Como o sistema lidará com as cinco distâncias de teste (5m, 10m, 15m, 20m, 25m)? 
+Será necessário recalcular a Homografia para cada distância? 
+O sistema terá um sensor de distância (laser) para verificar a distância real do alvo? 
+A precisão da medição da distância é crítica para o cálculo do MOA/MIL.
+
+
+
+
+Dataset para Aprendizado Residual 
+O texto menciona a criação de um dataset para "possíveis modelos de aprendizado residual" . 
+Qual é o objetivo desse aprendizado residual? 
+Se o sistema já usa Visão Computacional determinística (Homografia + Subtração), o que o modelo de aprendizado de máquina fará? 
+Isso é um ponto de pesquisa em aberto que precisa ser justificado ou removido do escopo principal.
+
+
+
+
+3. QUESTIONAMENTOS TÉCNICOS E MELHORIAS
+
+
+1.  Métricas de Precisão: 
+Qual é a precisão mínima aceitável (em milímetros ou MOA) para que o sistema seja considerado útil para fins esportivos? 
+Como essa precisão será medida e validada (por exemplo, comparando com medições manuais de alta precisão)?
+
+
+2.  Tratamento de Recuo e Vibração: 
+O método de Subtração de Imagem falhará se houver qualquer desalinhamento entre os frames "antes" e "depois". 
+Qual técnica de registro de imagem (image registration) será utilizada para alinhar os dois frames com precisão sub-pixel, compensando o recuo da arma?
+
+
+3.  Configuração da Câmera: 
+A desativação do foco e exposição automáticos  é correta. 
+No entanto, a calibração de Zhang é válida apenas se a distância focal e o ponto principal da câmera forem fixos. 
+Como será garantido que o atirador não altere o foco manual da câmera entre os disparos, invalidando a calibração?
+
+
+4.  Integração Balística: 
+O cálculo de correção é puramente geométrico . 
+Um TCC de alto nível deve considerar a balística externa. 
+O sistema deve calcular a correção para o ponto de impacto zero (zeroing) e não apenas o desvio. 
+Como o sistema incorporará dados balísticos (velocidade do projétil, coeficiente balístico) para fornecer uma correção mais precisa e preditiva?
+
+
+
+
+3.2. Melhorias e Sugestões para o Desenvolvimento
+
+
+1.  Requisitos Não Funcionais (RNFs): 
+O TCC deve incluir um capítulo de Requisitos. 
+Os RNFs são estratégicos aqui.
+Sugestão: 
+Defina RNFs como: 
+"O sistema deve processar a imagem e fornecer o feedback em menos de 5 segundos" (Desempenho) e 
+"O sistema deve manter uma precisão de medição de impacto de ± 1 mm a 25 metros" (Precisão).
+
+
+
+
+2.  Arquitetura do Sistema: 
+Crie um Diagrama de Componentes (UML ou similar) que ilustre o fluxo de dados: 
+Câmera -> Módulo de Calibração (OpenCV) -> Módulo de Detecção (Subtração/Registro) -> Módulo de Cálculo (Homografia/Trigonometria) -> Interface (Streamlit/Flask).
+
+
+
+
+3.  Metodologia (Reprodutibilidade): 
+Detalhe o processo de coleta de dados  com mais rigor.
+Sugestão: Especifique o protocolo de disparo 
+(ex: 5 grupos de 5 disparos por distância, com medição manual de controle). 
+O dataset deve ser público (GitHub) para garantir a reprodutibilidade.
+
+
+
+
+4.  Testes e Validação: 
+O TCC deve ter um capítulo de Resultados e Validação.
+Sugestão: O teste de calibração inicial com a moeda de 1 real  é um bom ponto de partida, mas é apenas um teste de escala. 
+O TCC deve incluir um teste de precisão do sistema completo, comparando o resultado do software com uma medição de alta precisão (ex: paquímetro digital no alvo).
+
+
+Ética não é apenas imagem do usuário! Cuidado.
+Câmera não é o problema… Trata-se de um estudo sobre ótica e lentes…
