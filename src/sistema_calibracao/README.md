@@ -1,22 +1,65 @@
-# Calibration Tool 🎯
+# 💻 Código-Fonte — Calibration Tool
 
-**Sistema de Auxilio para Calibragem de Miras Ópticas.**
+Este diretório contém o código-fonte e o executável da aplicação desktop responsável pelo processamento de vídeo em tempo real, detecção de marcadores ArUco, transformação homográfica e cálculo de correção balística em cliques (MOA/MIL), com interface gráfica construída em HTML/CSS/JS e executada nativamente via **PyWebView**.
 
-## 💡 A Ideia e o Problema
-No tiro desportivo e tático, a "zeragem" (calibração) de lunetas, *red dots* e miras metálicas é tradicionalmente feita pelo método de tentativa e erro. O atirador efetua disparos, verifica o alvo manualmente e estima os ajustes angulares. Esse processo consome tempo de estande e **desperdiça munição**, um insumo de altíssimo custo no cenário brasileiro. Além disso, os sistemas eletrônicos que automatizam essa leitura costumam ser importados e financeiramente inacessíveis para a maioria do público.
+---
 
-## 🎯 O Objetivo
-O **Calibration Tool** nasceu como Trabalho de Conclusão de Curso (TCC) em Ciência da Computação para democratizar a precisão balística, oferecendo uma solução nacional e de baixo custo. 
+## ▶️ Como Executar o Sistema
 
-O software transforma a câmera de um smartphone comum (conectado via Wi-Fi local) em um sensor óptico inteligente. Utilizando marcadores ArUco e cálculos de homografia, o sistema estabiliza a visão do alvo, detecta automaticamente o furo do disparo no papel, calcula o desvio milimétrico e converte esse erro em **instruções exatas de cliques de correção** (em MOA ou MIL) para as torres da mira do atirador.
+Você pode iniciar a aplicação de duas formas:
 
-## ✨ Principais Funcionalidades
-* **Visão Computacional Robusta:** Uso de OpenCV para retificação de perspectiva (*Top-Down*) e filtros morfológicos para detecção precisa de impactos, ignorando sombras e ruídos.
-* **Cálculo Balístico Dinâmico:** Conversão exata do erro linear para frações angulares (1/2, 1/4, 1/8 MOA e 1/10 MIL) ajustável para qualquer distância de tiro informada (de 10m a 100m+).
-* **Interface Focada em IHC:** Interface gráfica amigável, intuitiva e com Prevenção Ativa de erros, projetada para ser operada rapidamente no estande de tiro.
-* **Histórico e Persistência:** Banco de dados local com SQLite que gerencia múltiplos perfis de atiradores, cadastra armamentos e salva o histórico de resultados de todas as sessões de calibração.
+### Opção 1: Via Executável (Recomendado para Windows — sem necessidade de instalação)
+Basta navegar até a pasta do executável e abrir o arquivo diretamente:
+```text
+src/dev_interface/dist/app/app.exe
+```
 
-## 🛠️ Tecnologias Utilizadas
-* **Back-end & Visão:** Python, OpenCV, NumPy, Math.
-* **Front-end / UI:** PyWebView, Tailwind CSS, HTML/JS.
-* **Banco de Dados:** SQLite.
+---
+
+### Opção 2: Via Código-Fonte (Python)
+
+## 📋 Pré-requisitos
+
+* **Python 3.10+** instalado no sistema.
+* **Smartphone** com aplicativo de transmissão de vídeo via rede local (ex.: *IP Webcam* para Android) conectado na **mesma rede Wi-Fi** do computador.
+* **Alvo impresso** contendo os 4 marcadores **ArUco** nos cantos (disponível na pasta [`/documentos_tcc`](documentos_tcc/)).
+
+---
+
+## ⚙️ Instalação das Dependências
+
+Abra o terminal (Prompt de Comando, PowerShell ou Git Bash) dentro desta pasta (`src/`) e instale as bibliotecas necessárias:
+
+```bash
+pip install opencv-python numpy pywebview
+```
+
+## 🚀 Execução
+
+No terminal (dentro de src/), execute o arquivo principal:
+
+```bash
+python app.py
+```
+
+🎯 Fluxo de Uso na Interface
+
+1. Inicie o servidor de vídeo no aplicativo do smartphone e anote o endereço IP exibido na tela (ex.: http://0.0.0.0:8080/video)
+
+2. Realize o login ou cadastro de usuário na aplicação.
+
+3. No Setup de Calibração, informe a distância até o alvo (em metros), o valor do clique da luneta (ex.: 1/4 MOA) e a URL do stream da câmera IP.
+
+4. Defina o Ponto de Mira (POA) clicando sobre o alvo na tela.
+
+5. om os 4 marcadores ArUco detectados (badge verde), clique em Salvar Referência.
+
+6. Efetue o disparo e clique em Confirmar POI para visualizar a correção recomendada em cliques para as torres de elevação e lateralidade.
+
+🔧 Solução Rápida de Problemas
+
+- Bloqueio de segurança no Windows ao abrir o app.exe: Caso o Windows Defender / Controle Inteligente de Aplicativos bloqueie a execução por ser um software independente sem assinatura comercial, clique em Mais informações > Executar assim mesmo.
+
+- Erro ao conectar na câmera: Verifique se o computador e o smartphone estão na mesma rede Wi-Fi e se o endereço termina com /video. Você pode testar a conexão isoladamente usando o script conexao.py na pasta [scripts_auxiliares](/scripts_auxiliares).
+
+- Marcadores ArUco não detectados: Certifique-se de que os 4 cantos do alvo estão totalmente visíveis no enquadramento da câmera e sem sombras fortes ou reflexos diretos sobre os marcadores. Seguindo a ordem e posicionamento padrão, que pode ser visualizado na imagem [formato_padrao_marcadores](documentos_tcc/marcadores_aruco/formato_padrao_marcadores.png)

@@ -1,69 +1,52 @@
-# Projeto de Interface Humano-Computador
+# 🎯 Calibration Tool — Auxílio de Calibragem de Mira Inteligente para Fins Esportivos
 
-Projeto apresentado ao Centro Universitário [FEI](https://portal.fei.edu.br/), como parte dos requisitos necessários para aprovação na disciplina de Interface Humano-Computador (CC8122) do curso de Ciencia da Computação, orientado pelo Prof. Dr. [Plinio Thomaz Aquino Junior](http://lattes.cnpq.br/6186413528999908).
+> 🏆 **Projeto Premiado:** 1º Lugar na categoria Ciência da Computação no **INOVAFEI** (Centro Universitário FEI).
 
-## Membros da Equipe:
-- Mateus Rocha
+Sistema de visão computacional e engenharia de usabilidade desenvolvido como Trabalho de Conclusão de Curso (TCC). Projeto apresentado ao Centro Universitário [FEI](https://portal.fei.edu.br/), como parte dos requisitos necessários para aprovação na disciplina de Interface Humano-Computador (CC8122), e aprovação no curso de Ciencia da Computação, orientado pelo Prof. Dr. [Plinio Thomaz Aquino Junior](http://lattes.cnpq.br/6186413528999908). A aplicação automatiza e assiste o processo de zeragem (*zeroing*) de miras ópticas (lunetas) no tiro esportivo, convertendo desvios de impacto em instruções diretas de ajuste mecânico.
 
-## Título Original do TCC:
-Sistema de Auxilio para Calibragem de Miras Ópticas
+---
 
-## Orientador:
-- Plinio Thomaz Aquino Junior
+## 📌 Visão Geral e Problema Resolvido
 
-### Previsto desenvolver interface?
-(x) Sim   ( ) Não
+Tradicionalmente, a calibragem de uma luneta exige múltiplos disparos de tentativa e erro, cálculos balísticos manuais (conversão de distância e unidades angulares como MOA/MIL) e deslocamentos constantes até o alvo. Esse processo consome tempo de pista e gera alto desperdício de munição.
 
-### Objetivo do Trabalho?
-Calcular a calibração da mira do usuário, e guiar ele para concluir sua calibragem.
+O **Calibration Tool** resolve esse problema por meio de um fluxo assistido em tempo real:
+1. **Captura Remota:** Utiliza um smartphone posicionado próximo ao alvo transmitindo vídeo via rede local (Câmera IP) para o notebook do atirador.
+2. **Correção de Perspectiva:** Detecta quatro marcadores **ArUco** nos cantos do alvo e aplica **homografia planar** para corrigir distorções de ângulo da câmera.
+3. **Detecção e Cálculo Balístico:** Identifica o Ponto de Impacto (**POI**) após o disparo, calcula a distância vetorial até o Ponto de Mira (**POA**) definido pelo usuário e converte o desvio em **cliques exatos** para as torres de elevação e lateralidade da luneta.
 
-### Qual o produto final?
-Um sistema de interface simples para obter do usuário a informação da distância que ele deseja calibrar seu equipamento, e retornar o feedback o mais preciso e rápido possível.
+---
 
-### Quem é o usuário final deste produto?
-Os CACs (Colecionadores, atiradores e caçadores), policiais, pessoas com porte de arma, jogadores de airsoft com uso de miras, qualquer usuário dentro da lei que deseja calibrar seu equipamento.
+## 📂 Estrutura do Repositório
 
-### O que o usuário recebe de benefício ao usar esse produto?
-- Menos gasto de munição, consequentemente menos gasto financeiro;
-- Não se faz necessário conhecimento técnico para calibração, o sistema resolve sozinho;
-- Otimização do tempo do usuário, menos tempo para calibrar.
+| Diretório | Conteúdo |
+| :--- | :--- |
+| **[`/src`](./src)** | Código-fonte principal da aplicação em Python (OpenCV, NumPy), interface gráfica e requisitos de execução. |
+| **[`/documentacao_ihc`](./documentacao_ihc)** | Documentação completa de Engenharia de Usabilidade: Personas, Análise de Tarefas (HTA, GOMS, CTT), MoLIC, Planejamento DECIDE, Inspeção Heurística e Avaliação Empírica. |
+| **[`/documentos_tcc`](./documentos_tcc)** | Monografia final, apresentações de banca, referências bibliográficas e arquivos dos marcadores ArUco para impressão. |
+| **[`/scripts_auxiliares`](./scripts_auxiliares)** | Scripts utilitários para teste isolado de conexão de câmera IP, validação de homografia e calibração intrínseca. |
 
-### Quais as funcionalidades da ferramenta (visão do usuário)?
-- Sistema de cadastro e login do usuário;
-- Definir distância de calibração;
-- Marcar ponto de mira;
-- Confirmar ponto de impacto;
-- Receber orientação de ajuste.
+---
 
-### Quais tecnologias e ferramentas computacionais que pretendem usar neste projeto (TCC)?
-- Código desenvolvido em Python 3.10;
-- Bibliotecas:
-  - OpenCV;
-  - PyWebView;
-  - NumPy.
-- Hardware de captura e transmissão: Redmi com protocolo RTSP/HTTP (App IP Webcam);
-- Técnicas e Algoritmos:
-  - Método de Zhang;
-  - Matriz de homografia;
-  - Subtração de Imagem e Operações Morfológicas.
+## 🧠 Engenharia de Usabilidade (IHC) e Validação em Campo
 
-### Qual é o contexto de uso dessa aplicação?
-- Usuários: Atiradores esportivos, caçadores e colecionadores (CACs), com foco especial em iniciantes que carecem do conhecimento de cálculos balísticos, ou entusiastas que desejam otimizar seu tempo e munição.
-- Ambiente: Local controlado e autorizado para a prática de tiro, como estandes de tiro ou clubes especializados, que possuam iluminação adequada para garantir a nitidez da captura de imagem.
-- Equipamentos e Configuração: O usuário utiliza um Smartphone posicionada com um tripé a curta distância do alvo (aproximadamente 2 metros), que transmite o sinal de vídeo via wi-fi para um notebook atrás da linha de tiro, o alvo deve conter marcador fiduciais (ArUco) para permitir a coreção de perspectiva e escala.
-- Tarefa: O atirador realiza disparos em direção ao centro do alvo (POA), o sistema processa a imagem do impacto e fornece, em menos de 1 segundo, o feedback visual e numérico da correção necessária em "cliques" nas torres do seu equipamento.
-- Contexto Social/Econômico: Uma solução nacional de baixo custo voltada para tornar o esporte mais acessível no Brasil, reduzindo a dependência de tecnologias importadas de alto valor e simplificando um processo que tradicionalmente é feito por tentativa e erro.
+Toda a interface do sistema foi projetada e avaliada para garantir acessibilidade tanto para atiradores iniciantes quanto experientes:
 
-# Desenvolvimento:
-- [Análise de Concorrência](docs/analise_concorrencia.md)
-- [Personas](docs/personas.md)
-- [Cenário de Análise/Problema](docs/cenario_analise_problema.md)
-- [Análide de Tarefas](docs/analise_tarefas.md)
-- [Coleta de Dados](docs/coleta_dados.md)
-- [Ciclo de vida da engenharia de usabilidade](docs/ciclo_vida_usabilidade.md)
-- [Modelo Conceitual](docs/modelo_conceitual.md) 
-- [MOLIC](docs/molic.md)
-- [FIGMA](docs/figma.md)
-- [Planejamento da Avaliação](docs/planejamento_avaliacao.md)
-- [Avaliação de IHC através de Inspeção Heurística](docs/avaliacao_ihc_heuristica.md)
-- [Avaliação de Usabilidade baseado em Observação do Usuário](docs/avaliacao_usabilidade_usuario.md)
+* **Inspeção Heurística (Nielsen):** Análise sistemática de todas as telas com classificação de severidade (0 a 4), identificação de boas práticas (*dark mode* técnico, prevenção de erros e feedback em linguagem natural) e levantamento de melhorias de navegação.
+* **Teste Empírico em Estande de Tiro:** Avaliação por observação direta em ambiente real com disparos controlados. O sistema permitiu aproximar a calibragem em **apenas 2 disparos** — processo que tradicionalmente demandaria de **5 a 10 disparos** — validando a economia de insumos e a clareza do feedback em cliques.
+
+👉 *Acesse o índice completo dos artefatos de IHC em [`/documentacao_ihc/README.md`](./documentacao_ihc/README.md).*
+
+---
+
+## 🛠️ Stack Tecnológica e Metodologia
+
+* **Linguagem & Visão Computacional:** Python, OpenCV (`cv2.aruco`, transformações homográficas), NumPy.
+* **Design de Interface & Prototipação:** Figma.
+* **Engenharia de IHC & Documentação:** Molic, HTA, GOMS, CTT, Método DECIDE e Heurísticas de Nielsen.
+
+---
+
+## 👨‍💻 Autor
+
+**Mateus Rocha** — Bacharel em Ciência da Computação pelo Centro Universitário FEI.
