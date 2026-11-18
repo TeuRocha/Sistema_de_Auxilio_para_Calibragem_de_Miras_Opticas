@@ -22,7 +22,7 @@ src/dev_interface/dist/app/app.exe
 
 * **Python 3.10+** instalado no sistema.
 * **Smartphone** com aplicativo de transmissão de vídeo via rede local (ex.: *IP Webcam* para Android) conectado na **mesma rede Wi-Fi** do computador.
-* **Alvo impresso** contendo os 4 marcadores **ArUco** nos cantos (disponível na pasta [`/documentos_tcc`](documentos_tcc/)).
+* **Alvo impresso** contendo os 4 marcadores **ArUco** nos cantos (disponível na pasta [`documentos_tcc`](/documentos_tcc/marcadores_aruco)).
 
 ---
 
